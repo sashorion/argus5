@@ -290,6 +290,9 @@ func calcAggrStatus(grav argus.Gravity, tot int, max argus.Status, statuses []in
 
 	switch grav {
 	case argus.GRAV_DN:
+		if statuses[int(argus.CRITICAL)] > 0 {
+			return argus.CRITICAL
+		}
 		for sev := max; sev >= argus.CLEAR; sev-- {
 			if statuses[int(sev)] > 0 {
 				return sev
