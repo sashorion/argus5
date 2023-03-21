@@ -35,6 +35,8 @@ var oids = map[string]*OidConf{
 	"ifOutErrors":        {Oid: ".1.3.6.1.2.1.2.2.1.20", Idx: IFIDX},
 	"ifInOctets":         {Oid: ".1.3.6.1.2.1.2.2.1.10", Idx: IFIDX, Calc: "ave rate bits"},
 	"ifOutOctets":        {Oid: ".1.3.6.1.2.1.2.2.1.16", Idx: IFIDX, Calc: "ave rate bits"},
+	"ifHCInOctets":       {Oid: ".1.3.6.1.2.1.31.1.1.1.6", Idx: IFIDX, Calc: "ave rate bits"},
+	"ifHCOutOctets":      {Oid: ".1.3.6.1.2.1.31.1.1.1.10", Idx: IFIDX, Calc: "ave rate bits"},
 	"BGPPeerState":       {Oid: ".1.3.6.1.2.1.15.3.1.2", UpValue: 6}, // NB - .peerip
 	"dskPercent":         {Oid: ".1.3.6.1.4.1.2021.9.1.9", Idx: "dskPath dskDevs"},
 	"isdnLapdOperStatus": {Oid: ".1.3.6.1.2.1.10.20.1.3.4.1.2", Idx: IFIDX, UpValue: 3},
